@@ -1,0 +1,240 @@
+/* =====================
+   ROOT & BACKGROUND
+   ===================== */
+.root-pane {
+    -fx-background-color: #1e1e2e;
+}
+
+/* =====================
+   PANELS
+   ===================== */
+.canvas-box {
+    -fx-background-color: #2a2a3e;
+    -fx-background-radius: 14;
+    -fx-border-color: #3a3a54;
+    -fx-border-radius: 14;
+    -fx-border-width: 1.5;
+}
+
+/* =====================
+   TITLE
+   ===================== */
+.game-title {
+    -fx-font-size: 28;
+    -fx-font-weight: bold;
+    -fx-text-fill: #c0bde8;
+    -fx-font-family: "Monospaced";
+    -fx-letter-spacing: 6;
+}
+
+/* =====================
+   WORD DISPLAY
+   ===================== */
+.word-box {
+    -fx-background-color: #2a2a3e;
+    -fx-background-radius: 10;
+    -fx-border-color: #3a3a54;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-min-height: 64;
+}
+
+.word-label {
+    -fx-font-size: 30;
+    -fx-font-weight: bold;
+    -fx-text-fill: #e8e6f8;
+    -fx-font-family: "Monospaced";
+    -fx-letter-spacing: 8;
+}
+
+/* =====================
+   STATUS LABEL
+   ===================== */
+.status-label {
+    -fx-font-size: 13.5;
+    -fx-padding: 8 14;
+    -fx-background-radius: 8;
+    -fx-font-style: italic;
+}
+
+.status-neutral {
+    -fx-text-fill: #a8a4cc;
+    -fx-background-color: transparent;
+}
+
+.status-win {
+    -fx-text-fill: #4cde9a;
+    -fx-background-color: #1d3d2e;
+    -fx-border-color: #4cde9a44;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+}
+
+.status-loss {
+    -fx-text-fill: #e07070;
+    -fx-background-color: #3d1d1d;
+    -fx-border-color: #e0707044;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-font-style: normal;
+    -fx-font-weight: bold;
+}
+
+.status-warn {
+    -fx-text-fill: #e8b84e;
+    -fx-background-color: #3d2f10;
+    -fx-border-color: #e8b84e44;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+/* =====================
+   LETTER BUTTONS
+   ===================== */
+.letter-btn {
+    -fx-background-color: #2e2e45;
+    -fx-text-fill: #d0cef0;
+    -fx-font-size: 14;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-border-color: #44446a;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+}
+
+.letter-btn:hover {
+    -fx-background-color: #3c3c60;
+    -fx-border-color: #7878aa;
+}
+
+.letter-btn.correct {
+    -fx-background-color: #1e3d2e;
+    -fx-text-fill: #4cde9a;
+    -fx-border-color: #4cde9a88;
+}
+
+.letter-btn.wrong {
+    -fx-background-color: #3d1d1d;
+    -fx-text-fill: #e07070;
+    -fx-border-color: #e0707088;
+}
+
+.letter-btn:disabled {
+    -fx-opacity: 1.0;
+}
+
+/* =====================
+   INFO BAR
+   ===================== */
+.info-bar {
+    -fx-background-color: #2a2a3e;
+    -fx-background-radius: 8;
+    -fx-border-color: #3a3a54;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-padding: 8 14;
+}
+
+.info-label {
+    -fx-text-fill: #b0aedd;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+}
+
+/* =====================
+   SCORE BAR
+   ===================== */
+.score-bar {
+    -fx-background-color: #2a2a3e;
+    -fx-background-radius: 10;
+    -fx-border-color: #3a3a54;
+    -fx-border-radius: 10;
+    -fx-border-width: 1;
+    -fx-padding: 10 8;
+}
+
+.score-title {
+    -fx-text-fill: #7a789a;
+    -fx-font-size: 11;
+}
+
+.score-value {
+    -fx-text-fill: #d0cef0;
+    -fx-font-size: 22;
+    -fx-font-weight: bold;
+}
+
+.score-win {
+    -fx-text-fill: #4cde9a;
+}
+
+.score-loss {
+    -fx-text-fill: #e07070;
+}
+
+/* =====================
+   CONTROL BUTTONS
+   ===================== */
+.btn-primary {
+    -fx-background-color: #5a52c8;
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-border-width: 0;
+    -fx-cursor: hand;
+    -fx-padding: 8 16;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #6e66dc;
+}
+
+.btn-secondary {
+    -fx-background-color: #2e2e45;
+    -fx-text-fill: #d0cef0;
+    -fx-font-size: 13;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8;
+    -fx-border-color: #44446a;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+    -fx-cursor: hand;
+    -fx-padding: 8 12;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #3c3c60;
+}
+
+.btn-secondary:disabled {
+    -fx-opacity: 0.4;
+}
+
+/* =====================
+   DIFFICULTY COMBO
+   ===================== */
+.difficulty-box {
+    -fx-background-color: #2e2e45;
+    -fx-background-radius: 8;
+    -fx-border-color: #44446a;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.difficulty-box .list-cell {
+    -fx-text-fill: #d0cef0;
+    -fx-background-color: #2e2e45;
+}
+
+.difficulty-box .cell {
+    -fx-text-fill: #d0cef0;
+}
+
+/* Separator */
+.separator {
+    -fx-background-color: #3a3a54;
+}

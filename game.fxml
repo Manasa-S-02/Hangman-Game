@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane fx:id="rootPane" prefWidth="720" prefHeight="520"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="hangman.GameController"
+            styleClass="root-pane">
+
+    <HBox spacing="20" AnchorPane.topAnchor="0" AnchorPane.bottomAnchor="0"
+          AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0">
+        <HBox.margin><Insets top="20" right="20" bottom="20" left="20"/></HBox.margin>
+
+        <!-- LEFT PANEL: Drawing + score -->
+        <VBox fx:id="leftPanel" spacing="14" minWidth="280" maxWidth="280">
+
+            <!-- Canvas container -->
+            <StackPane fx:id="canvasContainer" styleClass="canvas-box"
+                       prefWidth="280" prefHeight="300"/>
+
+            <!-- Mistakes bar -->
+            <HBox styleClass="info-bar" alignment="CENTER_LEFT" spacing="8">
+                <HBox.margin><Insets/></HBox.margin>
+                <Label text="💀" style="-fx-font-size:18;"/>
+                <Label fx:id="mistakesLabel" text="Mistakes: 0 / 6" styleClass="info-label"/>
+            </HBox>
+
+            <!-- Scoreboard -->
+            <HBox styleClass="score-bar" alignment="CENTER" spacing="0">
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Wins" styleClass="score-title"/>
+                    <Label fx:id="winsLabel" text="0" styleClass="score-value score-win"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Losses" styleClass="score-title"/>
+                    <Label fx:id="lossesLabel" text="0" styleClass="score-value score-loss"/>
+                </VBox>
+                <Separator orientation="VERTICAL"/>
+                <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                    <Label text="Win Rate" styleClass="score-title"/>
+                    <Label fx:id="winRateLabel" text="0%" styleClass="score-value"/>
+                </VBox>
+            </HBox>
+
+        </VBox>
+
+        <!-- RIGHT PANEL -->
+        <VBox fx:id="rightPanel" spacing="14" HBox.hgrow="ALWAYS">
+
+            <!-- Title -->
+            <Label text="HANGMAN" styleClass="game-title"/>
+
+            <!-- Word display -->
+            <StackPane styleClass="word-box">
+                <Label fx:id="wordLabel" text="_ _ _ _ _ _" styleClass="word-label"/>
+            </StackPane>
+
+            <!-- Status message -->
+            <Label fx:id="statusLabel" text="Guess a letter!" styleClass="status-label status-neutral"
+                   wrapText="true" maxWidth="Infinity"/>
+
+            <!-- Letter keyboard -->
+            <FlowPane fx:id="letterGrid" hgap="6" vgap="6" prefWrapLength="400"
+                      styleClass="letter-grid"/>
+
+            <!-- Control buttons -->
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Button fx:id="newGameBtn" text="New Game" onAction="#onNewGame"
+                        styleClass="btn-primary" prefWidth="110"/>
+                <Button fx:id="hintBtn" text="💡 Hint" onAction="#onHint"
+                        styleClass="btn-secondary" prefWidth="90"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <ComboBox fx:id="difficultyBox" prefWidth="110" styleClass="difficulty-box"/>
+            </HBox>
+
+        </VBox>
+    </HBox>
+</AnchorPane>
